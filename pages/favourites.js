@@ -9,9 +9,13 @@ export default function Favourites() {
         return ('')
     }
 
-    console.log('Favourites', localStorage.getItem('favourites'))
+    if (!localStorage.getItem('favourites')) {
+        return <h4>Favourite some images to get started</h4>
+    }
 
     const favourites = localStorage.getItem('favourites').split('&&')
+
+
     console.log(favourites)
     
     return (

@@ -71,8 +71,9 @@ export default function CatSearch() {
   }
 
   const isFavourite = (url) => {
-    console.log('WAT', favourites.split('&&'))
-    // return false
+    if (!favourites) {
+      return false
+    }
     return favourites.split('&&').findIndex(f => f === url) > -1
   }
 
