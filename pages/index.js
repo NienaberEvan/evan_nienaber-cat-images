@@ -2,10 +2,12 @@ import React, {useState} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useRouter } from "next/router"
 
 async function fetchData(context) {
   const res = await fetch('https://api.thecatapi.com/v1/images/search');
   const data = await res.json();
+  
 
   if (!data) {
     return {
