@@ -17,9 +17,9 @@ export default function Favourites() {
     return (
         <div>
           <div className={styles.header}>
-            <button className={styles.link}>Breeds</button>
+            <button className={styles.link} onClick={() => router.push('/breeds')}>Breeds</button>
             <button className={styles.link} onClick={() => router.push('/categories')}>Categories</button>
-            <button className={styles.active} onClick={() => router.push('/favourites')}>Favourites</button>
+            <button className={styles.active}>Favourites</button>
           </div>
             <h1 className={styles.title}>Favourites</h1>
             {favourites.map((r, index) => (
